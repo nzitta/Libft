@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:21:49 by nireher-          #+#    #+#             */
 /*   Updated: 2023/10/05 20:23:18 by nireher-         ###   ########.fr       */

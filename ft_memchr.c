@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <ninareherg@gmail.com             +#+  +:+       +#+        */
+/*   By: nireher- <nireher-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:25:07 by nireher-          #+#    #+#             */
 /*   Updated: 2023/10/09 23:26:13 by nireher-         ###   ########.fr       */

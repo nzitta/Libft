@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nireher- <nireher-@student.42madrid.com >  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:17:30 by nireher-          #+#    #+#             */
 /*   Updated: 2023/10/05 20:19:14 by nireher-         ###   ########.fr       */

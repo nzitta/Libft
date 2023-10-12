@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:20:36 by nireher-          #+#    #+#             */
 /*   Updated: 2023/10/05 20:21:36 by nireher-         ###   ########.fr       */
