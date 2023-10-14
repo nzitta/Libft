@@ -6,7 +6,7 @@
 /*   By: nireher- <nireher-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:34:55 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/06 23:22:22 by nireher-         ###   ########.fr       */
+/*   Updated: 2023/10/14 03:10:15 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,22 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
 	size_t	i;
+	size_t	len;
 
-	if (dest == NULL)
-		return (0);
 	i = 0;
-	while (src[i] && i < (n - 1))
+	len = 0;
+	if (src != NULL)
 	{
-		dest[i] = src[i];
-		i++;
+		len = ft_strlen(src);
+		if (dest != NULL && n != 0)
+		{
+			while (i < (n - 1) && i < len)
+			{
+				dest[i] = src[i];
+				i++;
+			}
+			dest[i] = '\0';
+		}
 	}
-	dest[i] = '\0';
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
+	return (len);
 }
