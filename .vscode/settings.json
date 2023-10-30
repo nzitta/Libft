@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"ft_strtrim": "c",
+		"string.h": "c",
+		"stdlib.h": "c",
+		"sstream": "c"
+	}
+}

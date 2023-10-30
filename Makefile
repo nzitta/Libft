@@ -6,7 +6,7 @@
 #    By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/13 22:43:56 by nireher-          #+#    #+#              #
-#    Updated: 2023/10/17 03:46:21 by nireher-         ###   ########.fr        #
+#    Updated: 2023/10/27 18:26:43 by nireher-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,11 @@ SRCS	= 	ft_atoi.c\
 		   	ft_tolower.c\
 		   	ft_toupper.c\
 			ft_strjoin.c\
-			ft_substr.c
+			ft_substr.c\
+			ft_split.c\
+			ft_strmapi.c\
+			ft_striteri.c\
+			ft_itoa.c
 
 OBJS	= 	${SRCS:.c=.o}
 

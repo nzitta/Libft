@@ -6,7 +6,7 @@
 /*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 23:27:41 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/18 05:07:29 by nireher-         ###   ########.fr       */
+/*   Updated: 2023/10/20 18:15:54 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const set)
 	char	*tr;
 
 	if (s1 == NULL || set == NULL)
-		return NULL;
+		return (NULL);
 	start = 0;
 	while (s1[start] && strchr(set, s1[start]))
 		start++;
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const set)
 	total = end - start + 1;
 	tr = (char *)malloc((total + 1) * sizeof(char));
 	if (!tr)
-		return NULL;
+		return (NULL);
 	else
 		ft_strlcpy(tr, &s1[start], total);
 	return (tr);
