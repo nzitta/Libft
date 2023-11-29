@@ -3,34 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <nireher-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 21:34:55 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/14 03:10:15 by nireher-         ###   ########.fr       */
+/*   Created: 2023/11/11 05:16:36 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/13 21:02:13 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+/* this function copies a string and guarantee null termination
+   it returns the length of the source string */
+
+size_t	ft_strlcpy(char *dest, const char *source, size_t size)
 {
-	size_t	i;
-	size_t	len;
+	unsigned int	i;
 
 	i = 0;
-	len = 0;
-	if (src != NULL)
+	if (size > 0)
 	{
-		len = ft_strlen(src);
-		if (dest != NULL && n != 0)
+		while (source[i] && i < size - 1)
 		{
-			while (i < (n - 1) && i < len)
-			{
-				dest[i] = src[i];
-				i++;
-			}
-			dest[i] = '\0';
+			dest[i] = source[i];
+			i++;
 		}
+		dest[i] = '\0';
 	}
-	return (len);
+	return (ft_strlen(source));
 }

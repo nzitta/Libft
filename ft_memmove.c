@@ -3,33 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <nireher-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 23:04:25 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/24 06:21:52 by nireher-         ###   ########.fr       */
+/*   Created: 2023/11/11 01:20:00 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/21 13:30:58 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *cdest, const void *csrc, size_t n)
+/* 	
+ *  	this function is similar to memcpy, but handles overlapping
+ *  	which occur when the source mem block is placed before the dest 
+*/
+
+void	*ft_memmove(void *dest, const void *source, size_t len)
 {
-	size_t				i;
-	unsigned char		*dest;
+	unsigned char		*dst;
 	unsigned const char	*src;
 
-	dest = (unsigned char *)cdest;
-	src = (unsigned const char *)csrc;
-	if (!n || dest == src)
-		return (dest);
-	if (dest < src)
-		return (memcpy (dest, src, n));
+	dst = (unsigned char *)dest;
+	src = (unsigned const char *)source;
+	if (!dest && !source)
+		return (NULL);
+	if (dest <= source)
+		ft_memcpy(dest, source, len);
 	else
 	{
-		i = 0;
-		while (n--)
+		dst += len;
+		src += len;
+		while (len--)
 		{
-			dest[i] = src[i];
+			*(--dst) = *(--src);
 		}
 	}
 	return (dest);

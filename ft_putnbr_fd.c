@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 20:19:11 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/22 21:32:15 by nireher          ###   ########.fr       */
+/*   Created: 2023/11/29 18:10:36 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/29 18:49:22 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	while (n--)
+	long long	num;
+
+	num = n;
+	if (num < 0)
 	{
-		if (*(unsigned char *)s1 != *(unsigned char *)s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		s1++;
-		s2++;
+		ft_putchar_fd('-', fd);
+		num = -num;
 	}
-	return (0);
+	if (num > 9)
+	{
+		ft_putnbr_fd(num / 10, fd);
+		ft_putchar_fd((num % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd(num + '0', fd);
 }

@@ -3,26 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 20:20:36 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/05 20:21:36 by nireher-         ###   ########.fr       */
+/*   Created: 2023/11/06 07:06:53 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/10 06:16:28 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *ptr, int x, size_t n)
+/*
+	This function set a range of bytes to a specific single byte pattern
+	it returns a pointer to the memory block
+*/
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*s;
+	unsigned int	i;
+	unsigned char	*ptr;
 
 	i = 0;
-	s = ptr;
+	ptr = (unsigned char *)s;
 	while (i < n)
 	{
-		s[i] = x;
+		ptr[i] = c;
 		i++;
 	}
-	return (ptr);
+	return ((unsigned char *)s);
 }

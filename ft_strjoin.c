@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <nireher-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 03:20:32 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/17 03:21:21 by nireher-         ###   ########.fr       */
+/*   Created: 2023/11/28 04:13:49 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/28 04:38:47 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*s3;
-	int		i;
-	int		j;
+	size_t	total;
+	size_t	count;
+	char	*joined;
 
-	if (!s1 && !s2)
-		return (strdup(""));
-	s3 = (char *)malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
-	if (!s3)
+	total = ft_strlen(s1) + ft_strlen(s2);
+	joined = (char *)malloc(sizeof(char) * total + 1);
+	if (!joined)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-		s3[j++] = s1[i++];
-	i = 0;
-	while (s2[i])
-		s3[j++] = s2[i++];
-	s3[j] = '\0';
-	return (s3);
+	count = 0;
+	while (*s1)
+	{
+		*joined++ = *s1++;
+		count++;
+	}
+	while (*s2)
+	{
+		*joined++ = *s2++;
+		count++;
+	}
+	*joined = '\0';
+	return (joined - count);
 }

@@ -6,7 +6,7 @@
 /*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:20:31 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/27 20:18:31 by nireher-         ###   ########.fr       */
+/*   Updated: 2023/11/03 21:49:33 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	len = ft_strlen(s);
 	while (i < len)
 	{
-		s[i] = f(i, &s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }

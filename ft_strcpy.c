@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 20:19:11 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/22 21:32:15 by nireher          ###   ########.fr       */
+/*   Created: 2023/11/18 03:57:53 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/18 04:33:30 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strcpy(char *dest, char *src)
 {
-	while (n--)
+	char	*original;
+
+	original = dest;
+	if (!dest && !src)
+		return (0);
+	while (*src)
 	{
-		if (*(unsigned char *)s1 != *(unsigned char *)s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		s1++;
-		s2++;
+		*dest++ = *src++;
 	}
-	return (0);
+	*dest = '\0';
+	return (original);
 }

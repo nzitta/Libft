@@ -3,23 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 21:51:36 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/13 22:53:31 by nireher-         ###   ########.fr       */
+/*   Created: 2023/11/06 05:49:41 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/06 05:54:59 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+/*
+	This function calculate the length of a string (does not include null)
+	and returns the total num
+*/
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-			i++;
-	}
+	while (s[i])
+		i++;
 	return (i);
 }

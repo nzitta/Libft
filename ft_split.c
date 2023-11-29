@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 18:24:43 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/24 18:57:43 by nireher-         ###   ########.fr       */
+/*   Created: 2023/11/29 19:16:13 by nireher           #+#    #+#             */
+/*   Updated: 2023/11/29 19:22:39 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-static int	count_len(char const *s, char c, int i)
+static int	len_words(char const *s, char c, int i)
 {
 	int	len;
 
 	len = 0;
-	while (s[i] && s[i] == c)
+	while (s[i] != '\0' && s[i] == c)
 		i++;
-	while (s[i] && s[i] != c)
+	while (s[i] != '\0' && s[i] != c)
 	{
 		i++;
 		len++;
@@ -51,7 +51,7 @@ static int	count_len(char const *s, char c, int i)
 	return (len);
 }
 
-static void	*free_words(char **array, int size)
+static void	*free_word(char **array, int size)
 {
 	int	i;
 
@@ -80,12 +80,12 @@ char	**ft_split(char const *s, char c)
 	while (i < count_words(s, c))
 	{
 		index = 0;
-		while (s[j] && s[j] == c)
+		while (s[j] != '\0' && s[j] == c)
 			j++;
-		array[i] = malloc(sizeof(char) * count_len(s, c, j) + 1);
-		if (!array)
-			return (free_words(array, i));
-		while (s[j] && s[j] != c)
+		array[i] = malloc(sizeof(char) * len_words(s, c, j) + 1);
+		if (!array[i])
+			return (free_word(array, i));
+		while (s[j] != '\0' && s[j] != c)
 			array[i][index++] = s[j++];
 		array[i][index] = '\0';
 		i++;

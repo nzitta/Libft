@@ -6,7 +6,7 @@
 /*   By: nireher- <nireher-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:35:16 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/27 19:31:15 by nireher-         ###   ########.fr       */
+/*   Updated: 2023/11/29 20:04:43 by nireher-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	len = ft_strlen(s);
 	if (!s || !f)
 		return (NULL);
-	if (!(new_string = (char *)malloc(sizeof(char) * len + 1)));
+	new_string = (char *)malloc(sizeof(char) * len + 1);
+	if (!new_string)
 		return (NULL);
 	i = 0;
 	while (i < len)
