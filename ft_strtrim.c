@@ -6,45 +6,76 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:15:04 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/29 19:20:37 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/17 00:01:04 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_char(char c, char const *set)
-{
-	size_t	i;
+// PENDIENTE DE CORREGIR
 
-	i = 0;
-	while (set[i])
-	{
-		if (set[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
+static char    *ft_trimming(char const *set, char const *s1)
+{
+    unsigned int    sum;
+
+    sum = 0;
+    while (*set && *s1)
+    {
+        if (*set == *s1)
+        {
+            s1++;
+            set -= sum;
+            sum = 0;
+        }
+        else
+        {
+            set++;
+            sum++;
+        }
+    }
+    return ((char *)s1);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static void    ft_reverse(char *s1)
 {
-	char	*str;
-	size_t	i;
-	size_t	start;
-	size_t	end;
+    size_t    len = ft_strlen(s1);
+    char    *start = s1;
+    char    *end = s1 + len - 1;
 
-	start = 0;
-	while (s1[start] && get_char(s1[start], set))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && get_char(s1[end - 1], set))
-		end--;
-	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (start < end)
-		str[i++] = s1[start++];
-	str[i] = 0;
-	return (str);
+    while (start < end) 
+    { 
+        char temp = *start; 
+        *start = *end; 
+        *end = temp; 
+        start++; 
+        end--; 
+    }
+}
+
+char    *ft_strtrim(char const *s1, char const *set)
+{
+    char    *a1;
+    char    *a2;
+    size_t  count;
+    
+    a1 = ft_trimming(set, s1);
+    ft_reverse(a1);
+    a2 = ft_trimming(set, a1);
+    ft_reverse(a2);
+    size_t  len;
+    char    *trimmed;
+
+    len = ft_strlen(a2);
+    trimmed = (char *)malloc(sizeof(char) * (len + 1));
+    if (!trimmed)
+        return (0);
+    count = 0;
+    while (*a2 && len > 0)
+    {
+        *trimmed++ = *a2++;
+        count++;
+        len--;
+    }
+    *trimmed = '\0';
+    return (trimmed - count);
 }
