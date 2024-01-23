@@ -98,9 +98,9 @@ re:		fclean all
 
 .PHONY:		all clean fclean re
 
-#############################################
-#											#
-#	target: prerequisites or dependencies	#
-#	tab ->  	recipe						#
-#											#
-#############################################
+#################################################
+#					        #
+#	target: prerequisites or dependencies   #
+#	tab ->  	recipe		        #
+#					        #
+#################################################
