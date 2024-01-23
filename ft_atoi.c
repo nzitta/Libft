@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nireher- <nireher-@student.42madrid.com >  +#+  +:+       +#+        */
+/*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:17:30 by nireher-          #+#    #+#             */
-/*   Updated: 2023/10/05 20:19:14 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:14:49 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	This function converts a string into int
+*/
 
 int	ft_atoi(const char *str)
 {
