@@ -6,11 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 18:56:20 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/28 02:21:00 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:21:06 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+		This function creates a duplicate string on dinamic memory 
+ */
 
 static char	*mine_strlcpy(char *dest, const char *source)
 {
