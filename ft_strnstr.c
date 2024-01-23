@@ -6,15 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 21:51:27 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/23 04:21:33 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:27:23 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- *  This function locates *s1 on *s2
- *  not more than len characters are searched
+	This function locates *s1 on *s2
+	not more than len characters are searched
  */
 
 char	*ft_strnstr(const char *big, const char *tiny, size_t len)
