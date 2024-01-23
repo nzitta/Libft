@@ -6,13 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 07:11:07 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/21 13:23:21 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:23:10 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+/* 
+		This function concatenates two strings 
+ */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
