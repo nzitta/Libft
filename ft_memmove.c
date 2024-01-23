@@ -6,15 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 01:20:00 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/21 13:30:58 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:09:00 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* 	
- *  	this function is similar to memcpy, but handles overlapping
- *  	which occur when the source mem block is placed before the dest 
+		this function is similar to memcpy, but handles overlapping
+		which occur when the source mem block is placed before the dest 
 */
 
 void	*ft_memmove(void *dest, const void *source, size_t len)
