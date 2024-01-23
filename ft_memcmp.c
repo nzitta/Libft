@@ -6,11 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:19:11 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/22 21:32:15 by nireher          ###   ########.fr       */
+/*   Updated: 2024/01/23 13:20:28 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ 	This function compares two areas of memory
+ */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
