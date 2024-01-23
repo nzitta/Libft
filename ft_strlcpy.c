@@ -6,14 +6,14 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 05:16:36 by nireher           #+#    #+#             */
-/*   Updated: 2024/01/23 14:23:48 by nireher          ###   ########.fr       */
+/*   Updated: 2024/01/23 14:25:19 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* 
-	this function copies a string and guarantee null termination
+	This function copies a string and guarantee null termination
 	it returns the length of the source string 
 */
 
