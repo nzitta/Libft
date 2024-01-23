@@ -6,11 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 04:13:49 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/28 04:38:47 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:22:24 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+		This function joins two mem areas
+ */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
