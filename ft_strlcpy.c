@@ -6,14 +6,16 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 05:16:36 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/13 21:02:13 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:23:48 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* this function copies a string and guarantee null termination
-   it returns the length of the source string */
+/* 
+	this function copies a string and guarantee null termination
+	it returns the length of the source string 
+*/
 
 size_t	ft_strlcpy(char *dest, const char *source, size_t size)
 {
