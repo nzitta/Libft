@@ -6,11 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:48:02 by nireher           #+#    #+#             */
-/*   Updated: 2023/11/22 21:35:40 by nireher-         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:26:51 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* 
+	This function compares the value of two strings char by char
+*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
