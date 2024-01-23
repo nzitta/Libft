@@ -6,11 +6,15 @@
 /*   By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 19:40:33 by nireher-          #+#    #+#             */
-/*   Updated: 2023/11/29 19:53:51 by nireher          ###   ########.fr       */
+/*   Updated: 2024/01/23 13:18:02 by nireher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	This function converts an int into a string
+*/
 
 static int	count_number(int n)
 {
