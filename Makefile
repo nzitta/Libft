@@ -6,7 +6,7 @@
 #    By: nireher <nireher-@student.42madrid.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/04 03:41:07 by nireher           #+#    #+#              #
-#    Updated: 2023/11/29 20:06:57 by nireher-         ###   ########.fr        #
+#    Updated: 2024/02/03 23:45:19 by nireher          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,9 @@ SRCS 		= ft_isalpha.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c\
+			ft_lstnew.c\
+			ft_lstadd_front.c
 
 
 
